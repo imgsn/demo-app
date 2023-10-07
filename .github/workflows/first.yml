@@ -1,0 +1,21 @@
+name: First Project
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+      - name: Install NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Test
+        run: npm run test
