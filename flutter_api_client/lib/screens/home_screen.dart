@@ -183,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
 
           // User Profile
-          PopupMenuButton(
+          PopupMenuButton<void>(
             icon: CircleAvatar(
               backgroundImage: user?.photoURL != null
                   ? NetworkImage(user!.photoURL!)
@@ -192,8 +192,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ? Text(user?.displayName?[0] ?? 'U')
                   : null,
             ),
-            itemBuilder: (context) => [
-              PopupMenuItem(
+            itemBuilder: (context) => <PopupMenuEntry<void>>[
+              PopupMenuItem<void>(
                 enabled: false,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -210,7 +210,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
               const PopupMenuDivider(),
-              PopupMenuItem(
+              PopupMenuItem<void>(
                 onTap: _handleSignOut,
                 child: const Row(
                   children: [
