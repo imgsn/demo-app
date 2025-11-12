@@ -1,0 +1,8 @@
+# This file should be created automatically when you run flutter commands
+# If it doesn't exist, create it manually and update the paths
+
+sdk.dir=/path/to/Android/sdk
+flutter.sdk=/path/to/flutter
+flutter.buildMode=debug
+flutter.versionName=1.0.0
+flutter.versionCode=1
